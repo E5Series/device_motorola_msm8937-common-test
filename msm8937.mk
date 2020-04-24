@@ -406,7 +406,8 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     libqsap_sdk \
     libQWiFiSoftApCfg \
-    wcnss_service
+    wcnss_service \
+    WifiOverlay
 
 PRODUCT_PACKAGES += \
     hostapd \
