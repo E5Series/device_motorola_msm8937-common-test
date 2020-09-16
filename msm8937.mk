@@ -360,6 +360,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjustshoot_shim \
     libcutils_shim \
+    libmemset_shim \
     libqsapshim
 
 # Soong namespaces
