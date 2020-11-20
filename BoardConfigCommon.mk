@@ -150,10 +150,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
-# RIL
-TARGET_USES_OLD_MNC_FORMAT := true
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
