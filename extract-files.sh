@@ -78,7 +78,16 @@ function blob_fixup() {
         patchelf --add-needed libjustshoot_shim.so "${2}"
         ;;
 
-    vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
+    # Fix camera recording
+    vendor/lib/libmmcamera2_pproc_modules.so)
+        sed -i "s/ro.product.manufacturer/ro.product.nopefacturer/" "${2}"
+        ;;
+
+    vendor/lib/libmmcamera2_sensor_modules.so)
+        sed -i 's|msm8953_mot_deen_camera.xml|msm8937_mot_camera_conf.xml|g' "${2}"
+        ;;
+
+    vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so)
         sed -i "s/libgui/libwui/" "${2}"
         patchelf --remove-needed libstagefright.so "${2}"
         ;;
