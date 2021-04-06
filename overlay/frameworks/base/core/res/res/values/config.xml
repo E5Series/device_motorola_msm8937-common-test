@@ -265,6 +265,12 @@
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool name="config_wifi_background_scan_support">true</bool>
 
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">motoe5</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
+
     <!-- Default LED on time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOn">500</integer>
 
